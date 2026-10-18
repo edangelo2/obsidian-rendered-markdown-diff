@@ -101,9 +101,11 @@ To try your build, link or copy the folder into `<vault>/.obsidian/plugins/rende
 To release a new version:
 
 1. Bump `version` in `manifest.json` and `package.json`, and add the version to `versions.json`.
-2. Push a tag with the same number, for example `git tag 0.2.0 && git push --tags`.
+2. Publish it in one of two ways:
+   - In the **Actions** tab, open **Release** and click **Run workflow**.
+   - Push a tag with the same number, for example `git tag 0.2.0 && git push --tags`.
 
-The release workflow builds the plugin and attaches `main.js`, `manifest.json` and `styles.css` to the GitHub release.
+The release workflow tests and builds the plugin, then attaches `main.js`, `manifest.json` and `styles.css` to the GitHub release.
 
 ## Credits
 

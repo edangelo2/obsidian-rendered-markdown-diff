@@ -101,9 +101,11 @@ Para probar tu build, enlazá o copiá la carpeta en `<vault>/.obsidian/plugins/
 Para publicar una versión nueva:
 
 1. Subí `version` en `manifest.json` y `package.json`, y agregá la versión a `versions.json`.
-2. Pusheá un tag con el mismo número, por ejemplo `git tag 0.2.0 && git push --tags`.
+2. Publicala de una de estas dos formas:
+   - En la pestaña **Actions**, abrí **Release** y tocá **Run workflow**.
+   - Pusheá un tag con el mismo número, por ejemplo `git tag 0.2.0 && git push --tags`.
 
-El workflow de release compila el plugin y adjunta `main.js`, `manifest.json` y `styles.css` a la release de GitHub.
+El workflow de release prueba y compila el plugin, y adjunta `main.js`, `manifest.json` y `styles.css` a la release de GitHub.
 
 ## Créditos
 
