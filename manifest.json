@@ -1,0 +1,10 @@
+{
+  "id": "rendered-markdown-diff",
+  "name": "Rendered Markdown Diff",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Side-by-side diff of a note against git (HEAD, staged or any commit), rendered with Obsidian's own renderer, with synced scrolling, a change minimap and jump-to-change.",
+  "author": "Enrique D'Angelo",
+  "isDesktopOnly": true,
+  "authorUrl": "https://github.com/edangelo2"
+}

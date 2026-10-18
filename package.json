@@ -1,0 +1,46 @@
+{
+  "name": "rendered-markdown-diff",
+  "version": "0.1.0",
+  "description": "Obsidian plugin: rendered side-by-side diff of a note against git",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc --noEmit && node esbuild.config.mjs production",
+    "test": "esbuild test/core.test.ts --bundle --platform=node --format=cjs --outfile=test/.out/core.test.cjs --external:jsdom --log-level=warning && esbuild test/git.test.ts --bundle --platform=node --format=cjs --outfile=test/.out/git.test.cjs --log-level=warning && node --test test/.out/core.test.cjs test/.out/git.test.cjs",
+    "test:visual": "node test/harness/build.mjs && node test/harness/shoot.mjs light"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/diff-match-patch": "^1.0.36",
+    "@types/jsdom": "^30.0.0",
+    "@types/markdown-it": "^14.2.0",
+    "@types/node": "^26.6.5",
+    "builtin-modules": "^5.4.0",
+    "esbuild": "^0.28.2",
+    "jsdom": "^29.1.1",
+    "markdown-it": "^15.0.3",
+    "obsidian": "^1.14.4",
+    "playwright": "^1.64.1",
+    "tslib": "^2.8.1",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "diff": "^9.0.0",
+    "diff-match-patch": "^1.0.5"
+  },
+  "author": "Enrique D'Angelo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edangelo2/obsidian-rendered-markdown-diff.git"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "git",
+    "diff",
+    "markdown"
+  ]
+}
